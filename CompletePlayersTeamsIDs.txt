@@ -1,0 +1,159 @@
+Team: Arsenal FC
+Ranjith Joy,21597
+Bhavik Singh Minhas,942640
+Naveen Joseph,604014
+Arvind Kumar,63359
+yashasvi lv,455410
+Rohan Fernandes,792004
+
+Team: AFC Bournemouth
+Sai SAMARTH,832359
+Yogesh Nagarajan,612339
+Ashish Kamath,1200495
+Yogaraj Kumar,494195
+Adarsh Kamath,8604
+Fahad Shah,835106
+
+Team: Burnley FC
+Nihar Joshi,668118
+harsh hadkia,727182
+keval shah,416435
+Ragarsha Velmula,1081452
+Milan Odedara,38112
+Aamir Bakshi,340170
+
+Team: Chelsea FC
+Abhinav Gupta,757458
+Venkat Namdev,735102
+Hrishikesh Chavan,759169
+Subhajit Bhattacharya,120204
+Rohit Agarwal,43786
+ritesh sonthalia,58647
+
+Team: Crystal Palace FC
+SUBHAGATA CHAKRABORTY,10889
+praveen sindhu,65629
+Nikhil Grover,736377
+Faheem Ahmed,729326
+Ayan Banerjee,96546
+Saurav Chakravorty,1399516
+
+Team: Everton FC
+Aayush Deep,246160 
+Roomi Tarik,752012
+yash thawani,786009 
+Puru Varma,765927
+Srinath Rajamohan,43347 
+Rajdeep Roy,508922 
+
+Team: Hull City FC
+John Ozorio,756899
+Hitesh Kumar,1197555
+Abhijeet Prabhu,1812743
+Balaji Mohan,37600
+Chirag Malkan,767001
+Sunil Kini,1195790
+
+Team: Leicester City FC
+Sahil Sankhe,723926
+Vishal Vats,115164
+abhishek bare,685855
+Viggie Devadiga,843840
+Manoj Sriram Narasimhan,12695
+Pavan R,794406
+
+Team: Liverpool FC
+Deepak Talluri,291335
+Shikhar Singh,59371
+Mohit Hinduja,7539
+Lalit Chaudhary,30819
+Nitin Gaur,768283
+Mahesh Kumar,118208
+
+Team: Manchester City FC
+PRATIK shah,881922
+Shanub Sidiq,312289
+Dhruv Taneja,786705 
+Shibaprasad Bhattacharya,157532
+Raghav Prasad,25377
+Tejus Patil,537333
+
+Team: Manchester United FC
+Tarun Aritakula,722576
+Akshay Patil,726898
+Sagar Shah,291409
+Raj Shah,789534
+Manish Dhiman,977163
+Nischal Prakash,776860
+
+Team: Middlesbrough FC
+Vinyas M,303582
+Jithin Chandran,40184
+Kirtan Viramgami,755940
+shiven berry,815746
+vatsal viramgami,117049
+RAVI PATEL,51148
+
+Team: Southampton FC
+Kiran Karanth,265232
+satpal daryanani,484907
+Abhed S Nair,4762
+Biju Menon,377019
+Rahul Singh,936706
+rajith m,749694
+
+Team: Stoke City FC
+Dev Parikh,34524
+Prathamesh Karve,744231
+Ishan Joshi,758011
+Shihas Hassan,678434
+ANYA WARANG,735530
+Devan N,245687
+
+Team: Sunderland AFC
+Nilay Saraf,833604
+Abhishek Belsare,503755
+Het Gerrard,704696
+Harsh Panchal,746930
+Muzaiyen Bijli,785274
+Sandeep Deshpande,430435
+
+Team: Swansea City FC
+Arvind Neelakantan,745022
+jagdeesh rajagopalan,839700
+Sunil Motihar,786896
+Nikhil Rahate,984781
+Aman pandey,75342
+Arog Moroniqk,731797
+
+Team: Tottenham Hotspur FC
+Lakshya Duhan,131029
+Anurag Ahuja,771814
+Prashant Kamra,758708
+Shawn Jose,737854
+Kunal Mhadgut,198837
+Niranjan R,219567
+
+Team: Watford FC
+Jayadev Challapally,747333
+Gopalakrishnan N,1402717
+Janmeyjay Shukla,633628
+Harshvardhan Yadav,840269
+siddharth kaushal,725928
+huzefa ijardar,286226
+ 
+Team: West Bromwich Albion FC
+Nishad Goliwadekar,8083
+Akshay Iyer,748047
+Jugal Yadav,292164
+Charchit Jain,44278
+Aaqib Mirza,3480
+Anosh Daji,414258
+
+Team: West Ham United FC
+Rohan Ghosh,278256
+Harsh Garg,782240
+Kaushik Das,161009
+Kunal Ramteke,796045
+Mayank Singh,731614
+sarath kuttappan,770854

@@ -1,0 +1,16 @@
+Team: Arsenal FC
+Home Advantage: YES
+Captain: Ranjith Joy
+Vice Captain: Bhavik Singh Minhas
+Individual Scores           : [{'Ranjith Joy': 32}, {'Bhavik Singh Minhas': 22}, {'Naveen Joseph': 40}, {'Arvind Kumar': 33}, {'yashasvi lv': 14}, {'Rohan Fernandes': 51}]
+Team Scores afer multipliers: [{'Ranjith Joy': 64.0}, {'Bhavik Singh Minhas': 33.0}, {'Naveen Joseph': 40}, {'Arvind Kumar': 33}, {'yashasvi lv': 14}, {'Rohan Fernandes': 51}]
+Cumulative team Score: 296
+
+Team: Liverpool FC
+Home Advantage: NO
+Captain: Deepak Talluri
+Vice Captain: Shikhar Singh
+Individual Scores           : [{'Deepak Talluri': 47}, {'Shikhar Singh': 24}, {'Mohit Hinduja': 44}, {'Lalit Chaudhary': 30}, {'Nitin Gaur': 17}, {'Mahesh Kumar': 27}]
+Team Scores afer multipliers: [{'Deepak Talluri': 94.0}, {'Shikhar Singh': 36.0}, {'Mohit Hinduja': 44}, {'Lalit Chaudhary': 30}, {'Nitin Gaur': 17}, {'Mahesh Kumar': 27}]
+Cumulative team Score: 295
+
