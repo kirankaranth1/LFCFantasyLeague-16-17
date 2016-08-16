@@ -127,11 +127,11 @@ for k,v in sorted(C_teams.items()):
     (original,multiplied,oDict,mDict)=getTeamScoresfromList(v)
     max_score=max(original)
     if isHome(str(k),fixtures):
-        HA=1.2
+        HA=0.2
         print("Home Advantage: YES",file=f_teamscores)
         home=True
     else:
-        HA=1
+        HA=0
         print("Home Advantage: NO",file=f_teamscores)
         home=False
     #print(v)
