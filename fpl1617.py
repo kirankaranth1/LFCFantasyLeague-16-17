@@ -92,7 +92,7 @@ def getfix(gw):
 
 def calcResult(n):
     score=(int(math.floor(n / 10.0)) * 10)/10
-    return score
+    return int(score)
 
 def calcbonus(m):
     if m<89:
