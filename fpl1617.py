@@ -95,7 +95,7 @@ def calcResult(n):
     return int(score)
 
 def calcbonus(m):
-    if m<89:
+    if m<=89:
         return 0
     elif m>= 90 and m<129:
         return 1
