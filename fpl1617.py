@@ -1,7 +1,5 @@
 import re
 import requests
-from lxml import html
-from io import StringIO
 import sys
 import os
 import json
@@ -33,6 +31,10 @@ def get_all_teams(filenamePath):
                 teams[teamName].append([playerName,playerID,1])
     return teams
     
+def isValid(playername,fstream):
+    #print(playername)
+    return True
+    
 def Captain_ViceCaptainSetup(teams):
     for k,v in sorted(teams.items()):
         team=k
@@ -41,10 +43,12 @@ def Captain_ViceCaptainSetup(teams):
             print(str(i+1)+". "+teams[k][i][0])
         captain=int(input("Enter Captain number: "))
         teams[k].append(captain-1)
-        teams[k][captain-1][2]=2.0
+        if(isValid(teams[k][captain-1][0],f_captain)):
+            teams[k][captain-1][2]=2.0
         vc=int(input("Enter vc number: "))
         teams[k].append(vc-1)
-        teams[k][vc-1][2]=1.5
+        if(isValid(teams[k][vc-1][0],f_vicecaptain)):
+            teams[k][vc-1][2]=1.5
     return teams
     
 def getTeamScoresfromList(TeamList):
@@ -113,7 +117,7 @@ f_results=open("Results/Results_gw"+str(gw)+".txt",'w')
 f_captain=open("Counts/CaptainCount_gw"+str(gw)+".txt",'w')
 f_vicecaptain=open("Counts/ViceCaptainCount_gw"+str(gw)+".txt",'w')
 
-teams=get_all_teams("Test.txt")
+teams=get_all_teams("CompletePlayersTeamsIDs.txt")
 C_teams=Captain_ViceCaptainSetup(teams)
 allTeamScores = {}
 
@@ -169,7 +173,6 @@ for fixture in fixtures:
         continue
 
 f_results.close()
-# allTeamScoresFiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
 captains={}
 vicecaptains={}
 
@@ -191,12 +194,11 @@ for i in range(1,gw+1):
     currentFile.close()
 
 template = "{0:25}:{1:10}"
+
 for k,v in sorted(captains.items(), key=itemgetter(1), reverse=True):
     print(template.format(k,v),file=f_captain)
 
 for k,v in sorted(vicecaptains.items(), key=itemgetter(1), reverse=True):
     print(template.format(k,v),file=f_vicecaptain)
     
-#print(captains,file=f_captain)
-#print(vicecaptains,file=f_vicecaptain)
 wd.quit() 
