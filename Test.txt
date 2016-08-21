@@ -1,15 +1,15 @@
-Team: Arsenal FC
-Ranjith Joy,21597
-Bhavik Singh Minhas,942640
-Naveen Joseph,604014
-Arvind Kumar,63359
-yashasvi lv,455410
-Rohan Fernandes,792004
+Team: Manchester United FC
+Tarun Aritakula,722576
+Akshay Patil,726898
+Sagar Shah,291409
+Raj Shah,789534
+Manish Dhiman,977163
+Nischal Prakash,776860
 
-Team: Liverpool FC
-Deepak Talluri,291335
-Shikhar Singh,59371
-Mohit Hinduja,7539
-Lalit Chaudhary,30819
-Nitin Gaur,768283
-Mahesh Kumar,118208
+Team: Southampton FC
+Kiran Karanth,265232
+satpal daryanani,484907
+Abhed S Nair,4762
+Biju Menon,377019
+Rahul Singh,936706
+rajith m,749694

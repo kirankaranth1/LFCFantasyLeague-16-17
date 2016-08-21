@@ -9,8 +9,8 @@ from selenium.webdriver.common.action_chains import ActionChains
 import time
 from operator import itemgetter
 
-wd = WebDriver()
-wd.implicitly_wait(60)
+#wd = WebDriver()
+#wd.implicitly_wait(60)
 
 
 teams={}
@@ -66,10 +66,17 @@ def getTeamScoresfromList(TeamList):
     
 # Get a player's score given player ID and gw number
 def get_player_score(id,gw):
-    url="https://fantasy.premierleague.com/a/team/"+str(id)+"/event/"+str(gw)
-    wd.get(url)
-    points=wd.find_element_by_xpath(".//*[@id='ismr-scoreboard']/div/div[2]/div[1]/div/div").text
-    return int(re.findall('\d+',points)[0])
+    url="https://fantasy.premierleague.com/drf/entry/"+str(id)+"/event/"+str(gw)+"/picks"
+    #wd.get(url)
+    r = requests.get(url)
+    result = json.loads(r.text)
+    #points=wd.find_element_by_xpath(".//*[@id='ismr-scoreboard']/div/div[2]/div[1]/div/div").text
+    #transfers=wd.find_element_by_xpath(".//*[@id='ismr-scoreboard']/div/div[2]/div[2]/div/div[4]/div/div").text
+    points=result['entry_history']['points']
+    deductions=result['entry_history']['event_transfers_cost']
+    
+    score = int(points)-int(deductions)
+    return score
 
 
     
@@ -104,12 +111,9 @@ def calcbonus(m):
     else:
         return 3 
     
-    
-fixtures=getfix(1)
 
-
-
-gw=1
+gw=int(input("Enter Gameweek number: "))
+fixtures=getfix(gw)
 
 # Streams to all log files
 f_teamscores=open("TeamScores/TeamScore_gw"+str(gw)+".txt",'w')
@@ -117,7 +121,7 @@ f_results=open("Results/Results_gw"+str(gw)+".txt",'w')
 f_captain=open("Counts/CaptainCount_gw"+str(gw)+".txt",'w')
 f_vicecaptain=open("Counts/ViceCaptainCount_gw"+str(gw)+".txt",'w')
 
-teams=get_all_teams("CompletePlayersTeamsIDs.txt")
+teams=get_all_teams("Test.txt")
 C_teams=Captain_ViceCaptainSetup(teams)
 allTeamScores = {}
 
@@ -201,4 +205,3 @@ for k,v in sorted(captains.items(), key=itemgetter(1), reverse=True):
 for k,v in sorted(vicecaptains.items(), key=itemgetter(1), reverse=True):
     print(template.format(k,v),file=f_vicecaptain)
     
-wd.quit() 
