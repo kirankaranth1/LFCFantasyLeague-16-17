@@ -1,19 +1,13 @@
 import re
 import requests
-import sys
-import os
 import json
 import math
-from selenium.webdriver.firefox.webdriver import WebDriver
-from selenium.webdriver.common.action_chains import ActionChains
 import time
+import os
 from operator import itemgetter
-
-#wd = WebDriver()
-#wd.implicitly_wait(60)
+import traceback
 
 
-teams={}
 # Parses members of each team from file
 def get_all_teams(filenamePath):
     myFile=open(filenamePath)
@@ -32,7 +26,6 @@ def get_all_teams(filenamePath):
     return teams
     
 def isValid(playername,fstream):
-    #print(playername)
     return True
     
 def Captain_ViceCaptainSetup(teams):
@@ -67,11 +60,8 @@ def getTeamScoresfromList(TeamList):
 # Get a player's score given player ID and gw number
 def get_player_score(id,gw):
     url="https://fantasy.premierleague.com/drf/entry/"+str(id)+"/event/"+str(gw)+"/picks"
-    #wd.get(url)
     r = requests.get(url)
     result = json.loads(r.text)
-    #points=wd.find_element_by_xpath(".//*[@id='ismr-scoreboard']/div/div[2]/div[1]/div/div").text
-    #transfers=wd.find_element_by_xpath(".//*[@id='ismr-scoreboard']/div/div[2]/div[2]/div/div[4]/div/div").text
     points=result['entry_history']['points']
     deductions=result['entry_history']['event_transfers_cost']
     
@@ -84,8 +74,6 @@ def isHome(teamname,fixtures):
     for fixture in fixtures:
         
         if teamname in fixture['homeTeamName']:
-            #print(result[gw+1])
-            #break
             return True
         elif teamname in fixture['awayTeamName']:
             return False
@@ -110,98 +98,143 @@ def calcbonus(m):
         return 2
     else:
         return 3 
-    
 
-gw=int(input("Enter Gameweek number: "))
-fixtures=getfix(gw)
-
-# Streams to all log files
-f_teamscores=open("TeamScores/TeamScore_gw"+str(gw)+".txt",'w')
-f_results=open("Results/Results_gw"+str(gw)+".txt",'w')
-f_captain=open("Counts/CaptainCount_gw"+str(gw)+".txt",'w')
-f_vicecaptain=open("Counts/ViceCaptainCount_gw"+str(gw)+".txt",'w')
-
-teams=get_all_teams("Test.txt")
-C_teams=Captain_ViceCaptainSetup(teams)
-allTeamScores = {}
-
-for k,v in sorted(C_teams.items()):
-    print("\nCalculating Scores of %s" %(str(k)))
-    print("Team: %s" %(str(k)),file=f_teamscores)
-    (original,multiplied,oDict,mDict)=getTeamScoresfromList(v)
-    max_score=max(original)
-    if isHome(str(k),fixtures):
-        HA=0.2
-        print("Home Advantage: YES",file=f_teamscores)
-        home=True
-    else:
-        HA=0
-        print("Home Advantage: NO",file=f_teamscores)
-        home=False
-    #print(v)
-    print("Captain: %s" %(v[v[6]][0]),file=f_teamscores)
-    print("Vice Captain: %s" %(v[v[7]][0]),file=f_teamscores)
-    print("Individual Scores           : %s" %(str(oDict)),file=f_teamscores)
-    print("Team Scores afer multipliers: %s" %(str(mDict)),file=f_teamscores)
-    t_score=sum(multiplied)+(HA*max_score)
-    print("Cumulative team Score: %s\n" %(str(round(t_score))),file=f_teamscores)
-    allTeamScores[str(k)]=round(t_score)
-    
-f_teamscores.close()
-    
-for fixture in fixtures:
-    try:
-        hscore=allTeamScores[fixture['homeTeamName']]
-        ascore=allTeamScores[fixture['awayTeamName']]
-        
-        if(9>=math.fabs(hscore-ascore)>=0):
-            fixture['result']['goalsAwayTeam']=0
-            fixture['result']['goalsHomeTeam']=0
-            diff=math.fabs(hscore-ascore)
-        elif(hscore-ascore>=10):
-            fixture['result']['goalsAwayTeam']=0
-            diff=hscore-ascore
-            fixture['result']['goalsHomeTeam']=calcResult(diff)
-        else:
-            diff=ascore-hscore
-            fixture['result']['goalsAwayTeam']=calcResult(diff)
-            fixture['result']['goalsHomeTeam']=0
+try:
+    print("-----------------------------------------------------")
+    print("LFC India Fantasy League Score calculator 16-17")
+    print("Author: kirankaranth1@gmail.com")
+    print("-----------------------------------------------------")
+    curr_dir=str(os.getcwd())
+    teams={}
             
-        print(str(fixture['homeTeamName'])+" vs "+str(fixture['awayTeamName']),file=f_results)
-        print(str(allTeamScores[fixture['homeTeamName']])+"-"+str(allTeamScores[fixture['awayTeamName']]),file=f_results)
-        print("\nBonus points:"+str(calcbonus(diff)),file=f_results)
-        print("Final Score: "+str(fixture['result']['goalsHomeTeam'])+"-"+str(fixture['result']['goalsAwayTeam']),file=f_results)
-        print("--------------------------------------------",file=f_results)
-    
-    except KeyError:
-        continue
+    gw=int(input("Enter Gameweek number: "))
+    fixtures=getfix(gw)
 
-f_results.close()
-captains={}
-vicecaptains={}
+    # Streams to all log files
+    os.makedirs("TeamScores", exist_ok=True)
+    os.makedirs("Results", exist_ok=True)
+    os.makedirs("Counts", exist_ok=True)
+    os.makedirs("Counts/Captains", exist_ok=True)
+    os.makedirs("Counts/ViceCaptains", exist_ok=True)
 
-for i in range(1,gw+1):
-    currentFile = open("TeamScores/TeamScore_gw"+str(gw)+".txt",'r')
-    fileLines = currentFile.readlines()
-    for line in fileLines:
-        if(line.startswith("Captain")):
-            try:
-                captains[line.split(':')[1].strip()] += 1
-            except KeyError:
-                captains[line.split(':')[1].strip()] = 1
-        if(line.startswith("Vice Captain")):
-            try:
-                vicecaptains[line.split(':')[1].strip()] += 1
-            except KeyError:
-                vicecaptains[line.split(':')[1].strip()] = 1
+    teamscores_path=curr_dir+"\TeamScores\TeamScore_gw"+str(gw)+".txt"
+    results_path=curr_dir+"\Results\Results_gw"+str(gw)+".txt"
+    captain_path=curr_dir+"\Counts\Captains\CaptainCount_gw"+str(gw)+".txt"
+    vicecaptain_path=curr_dir+"\Counts\ViceCaptains\ViceCaptainCount_gw"+str(gw)+".txt"
+
+
+    f_teamscores=open("TeamScores/TeamScore_gw"+str(gw)+".txt",'w')
+    f_results=open("Results/Results_gw"+str(gw)+".txt",'w')
+    f_captain=open("Counts/Captains/CaptainCount_gw"+str(gw)+".txt",'w')
+    f_vicecaptain=open("Counts/ViceCaptains/ViceCaptainCount_gw"+str(gw)+".txt",'w')
+
+    teams=get_all_teams("Test.txt")
+    C_teams=Captain_ViceCaptainSetup(teams)
+    allTeamScores = {}
+
+    for k,v in sorted(C_teams.items()):
+        print("\nCalculating Scores of %s" %(str(k)))
+        print("Team: %s" %(str(k)),file=f_teamscores)
+        (original,multiplied,oDict,mDict)=getTeamScoresfromList(v)
+        max_score=max(original)
+        if isHome(str(k),fixtures):
+            HA=0.2
+            print("Home Advantage: YES",file=f_teamscores)
+            home=True
+        else:
+            HA=0
+            print("Home Advantage: NO",file=f_teamscores)
+            home=False
+        #print(v)
+        print("Captain: %s" %(v[v[6]][0]),file=f_teamscores)
+        print("Vice Captain: %s" %(v[v[7]][0]),file=f_teamscores)
+        print("Individual Scores           : %s" %(str(oDict)),file=f_teamscores)
+        print("Team Scores afer multipliers: %s" %(str(mDict)),file=f_teamscores)
+        t_score=sum(multiplied)+(HA*max_score)
+        print("Cumulative team Score: %s\n" %(str(round(t_score))),file=f_teamscores)
+        allTeamScores[str(k)]=round(t_score)
         
-    currentFile.close()
+    f_teamscores.close()
+        
+    for fixture in fixtures:
+        try:
+            hscore=allTeamScores[fixture['homeTeamName']]
+            ascore=allTeamScores[fixture['awayTeamName']]
+            
+            if(9>=math.fabs(hscore-ascore)>=0):
+                fixture['result']['goalsAwayTeam']=0
+                fixture['result']['goalsHomeTeam']=0
+                diff=math.fabs(hscore-ascore)
+            elif(hscore-ascore>=10):
+                fixture['result']['goalsAwayTeam']=0
+                diff=hscore-ascore
+                fixture['result']['goalsHomeTeam']=calcResult(diff)
+            else:
+                diff=ascore-hscore
+                fixture['result']['goalsAwayTeam']=calcResult(diff)
+                fixture['result']['goalsHomeTeam']=0
+                
+            print(str(fixture['homeTeamName'])+" vs "+str(fixture['awayTeamName']),file=f_results)
+            print(str(allTeamScores[fixture['homeTeamName']])+"-"+str(allTeamScores[fixture['awayTeamName']]),file=f_results)
+            print("\nBonus points:"+str(calcbonus(diff)),file=f_results)
+            print("Final Score: "+str(fixture['result']['goalsHomeTeam'])+"-"+str(fixture['result']['goalsAwayTeam']),file=f_results)
+            print("--------------------------------------------",file=f_results)
+        
+        except KeyError:
+            continue
 
-template = "{0:25}:{1:10}"
+    f_results.close()
+    captains={}
+    vicecaptains={}
+    isCountsCalculated=True
+    for i in range(1,gw+1):
+        try:
+            currentFile = open("TeamScores/TeamScore_gw"+str(i)+".txt",'r')
+        except FileNotFoundError:
+            print("WARNING: File TeamScores/TeamScore_gw"+str(i)+".txt not found. Skipping captain and vc count calculation.")
+            isCountsCalculated=False
+            break
+        fileLines = currentFile.readlines()
+        for line in fileLines:
+            if(line.startswith("Captain")):
+                try:
+                    captains[line.split(':')[1].strip()] += 1
+                except KeyError:
+                    captains[line.split(':')[1].strip()] = 1
+            if(line.startswith("Vice Captain")):
+                try:
+                    vicecaptains[line.split(':')[1].strip()] += 1
+                except KeyError:
+                    vicecaptains[line.split(':')[1].strip()] = 1
+        currentFile.close()
 
-for k,v in sorted(captains.items(), key=itemgetter(1), reverse=True):
-    print(template.format(k,v),file=f_captain)
+    template = "{0:25}:{1:10}"
+    if(isCountsCalculated):
+        for k,v in sorted(captains.items(), key=itemgetter(1), reverse=True):
+            print(template.format(k,v),file=f_captain)
 
-for k,v in sorted(vicecaptains.items(), key=itemgetter(1), reverse=True):
-    print(template.format(k,v),file=f_vicecaptain)
-    
+        for k,v in sorted(vicecaptains.items(), key=itemgetter(1), reverse=True):
+            print(template.format(k,v),file=f_vicecaptain)
+        
+    print("\n")
+    print("--------------------------------------------------------------------------------------------------")
+    print("Team scores are logged at the below location:")
+    print(teamscores_path)
+    print("------------------------")
+    print("Final results are logged at the below location:")
+    print(results_path)
+    if(isCountsCalculated):
+        print("------------------------")
+        print("Captain counts are logged at the below location:")
+        print(captain_path)
+        print("------------------------")
+        print("Vice captain counts are logged at the below location:")
+        print(vicecaptain_path)
+    print("--------------------------------------------------------------------------------------------------")
+    dummy=input("Press Enter to exit the program...")
+
+except:
+    print("-----------------------------------------------------\n-----------------------------------------------------")
+    print("Unexpected error encountered. Please report the below message to author.")
+    print(str(traceback.format_exc()))
+    dummy=input("Press Enter to exit the program...")

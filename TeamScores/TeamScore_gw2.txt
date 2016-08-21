@@ -1,16 +1,16 @@
 Team: Manchester United FC
 Home Advantage: YES
-Captain: Sagar Shah
-Vice Captain: Tarun Aritakula
+Captain: Tarun Aritakula
+Vice Captain: Akshay Patil
 Individual Scores           : [{'Tarun Aritakula': 32}, {'Akshay Patil': 40}, {'Sagar Shah': 66}, {'Raj Shah': 18}, {'Manish Dhiman': 55}, {'Nischal Prakash': 62}]
-Team Scores afer multipliers: [{'Tarun Aritakula': 48.0}, {'Akshay Patil': 40}, {'Sagar Shah': 132.0}, {'Raj Shah': 18}, {'Manish Dhiman': 55}, {'Nischal Prakash': 62}]
-Cumulative team Score: 368
+Team Scores afer multipliers: [{'Tarun Aritakula': 64.0}, {'Akshay Patil': 60.0}, {'Sagar Shah': 66}, {'Raj Shah': 18}, {'Manish Dhiman': 55}, {'Nischal Prakash': 62}]
+Cumulative team Score: 338
 
 Team: Southampton FC
 Home Advantage: NO
-Captain: Abhed S Nair
-Vice Captain: rajith m
+Captain: Kiran Karanth
+Vice Captain: satpal daryanani
 Individual Scores           : [{'Kiran Karanth': 71}, {'satpal daryanani': 61}, {'Abhed S Nair': 53}, {'Biju Menon': 50}, {'Rahul Singh': 22}, {'rajith m': 54}]
-Team Scores afer multipliers: [{'Kiran Karanth': 71}, {'satpal daryanani': 61}, {'Abhed S Nair': 106.0}, {'Biju Menon': 50}, {'Rahul Singh': 22}, {'rajith m': 81.0}]
-Cumulative team Score: 391
+Team Scores afer multipliers: [{'Kiran Karanth': 142.0}, {'satpal daryanani': 91.5}, {'Abhed S Nair': 53}, {'Biju Menon': 50}, {'Rahul Singh': 22}, {'rajith m': 54}]
+Cumulative team Score: 412
 
