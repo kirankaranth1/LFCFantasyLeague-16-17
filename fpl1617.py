@@ -25,22 +25,45 @@ def get_all_teams(filenamePath):
                 teams[teamName].append([playerName,playerID,1])
     return teams
     
-def isValid(playername,fstream):
-    return True
+def isValidCaptain(playername):
+    if(prvsCaptainFileFound):
+        for line in prvsCaptains:
+            if(playername in line):
+                count=int(line.split(':')[1].strip())
+                if(count<7):
+                    return True
+                else:
+                    return False
+        return True
+    else:
+        return True
+    
+def isValidViceCaptain(playername):
+    if(prvsVcFileFound):
+        for line in prvsViceCaptains:
+            if(playername in line):
+                count=int(line.split(':')[1].strip())
+                if(count<7):
+                    return True
+                else:
+                    return False
+        return True
+    else:
+        return True
     
 def Captain_ViceCaptainSetup(teams):
     for k,v in sorted(teams.items()):
         team=k
-        print("Team: %s" %(str(k)))
+        print("-------------------\nTeam: %s" %(str(k)))
         for i in range(0,len(v)):
             print(str(i+1)+". "+teams[k][i][0])
         captain=int(input("Enter Captain number: "))
         teams[k].append(captain-1)
-        if(isValid(teams[k][captain-1][0],f_captain)):
-            teams[k][captain-1][2]=2.0
+        if(isValidCaptain(teams[k][captain-1][0])):
+            teams[k][captain-1][2]=2
         vc=int(input("Enter vc number: "))
         teams[k].append(vc-1)
-        if(isValid(teams[k][vc-1][0],f_vicecaptain)):
+        if(isValidViceCaptain(teams[k][vc-1][0])):
             teams[k][vc-1][2]=1.5
     return teams
     
@@ -103,11 +126,32 @@ try:
     print("-----------------------------------------------------")
     print("LFC India Fantasy League Score calculator 16-17")
     print("Author: kirankaranth1@gmail.com")
+    print("Source: https://github.com/kirankaranth1/LFCFantasyLeague-16-17")
     print("-----------------------------------------------------")
     curr_dir=str(os.getcwd())
     teams={}
             
     gw=int(input("Enter Gameweek number: "))
+    prvsCaptainFile="Counts/Captains/CaptainCount_gw"+str(gw-1)+".txt"
+    prvsVcFile="Counts/ViceCaptains/ViceCaptainCount_gw"+str(gw-1)+".txt"
+    try:
+        prvsCaptainStream=open(prvsCaptainFile,'r')
+    except FileNotFoundError:
+        prvsCaptainFileFound=False
+        print("WARNING: Captain count file for previous gw was not found. Hence, count checking of entered captains will be skipped.")
+    else:
+        prvsCaptainFileFound=True
+        prvsCaptains=prvsCaptainStream.readlines()
+        
+    try:
+        prvsVcStream=open(prvsVcFile,'r')
+    except FileNotFoundError:
+        prvsVcFileFound=False
+        print("WARNING: Vice Captain count file for previous gw was not found. Hence, count checking of entered captains will be skipped.")
+    else:
+        prvsVcFileFound=True
+        prvsViceCaptains=prvsVcStream.readlines()
+
     fixtures=getfix(gw)
 
     # Streams to all log files
@@ -127,8 +171,11 @@ try:
     f_results=open("Results/Results_gw"+str(gw)+".txt",'w')
     f_captain=open("Counts/Captains/CaptainCount_gw"+str(gw)+".txt",'w')
     f_vicecaptain=open("Counts/ViceCaptains/ViceCaptainCount_gw"+str(gw)+".txt",'w')
-
-    teams=get_all_teams("Test.txt")
+    
+    # Main peogram starts here
+    teams=get_all_teams("CompletePlayersTeamsIDs.txt")
+    
+    print("\n-------------------------------------------------------------------------------------------------\nPlease setup captain and vice captain for each team for gameweek "+str(gw)+"\n-------------------------------------------------------------------------------------------------")
     C_teams=Captain_ViceCaptainSetup(teams)
     allTeamScores = {}
 
