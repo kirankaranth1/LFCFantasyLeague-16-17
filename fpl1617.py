@@ -172,7 +172,7 @@ try:
     f_captain=open("Counts/Captains/CaptainCount_gw"+str(gw)+".txt",'w')
     f_vicecaptain=open("Counts/ViceCaptains/ViceCaptainCount_gw"+str(gw)+".txt",'w')
     
-    # Main peogram starts here
+    # Main program starts here
     teams=get_all_teams("CompletePlayersTeamsIDs.txt")
     
     print("\n-------------------------------------------------------------------------------------------------\nPlease setup captain and vice captain for each team for gameweek "+str(gw)+"\n-------------------------------------------------------------------------------------------------")
