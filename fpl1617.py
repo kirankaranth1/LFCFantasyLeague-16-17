@@ -82,8 +82,20 @@ def getTeamScoresfromList(TeamList):
     
 # Get a player's score given player ID and gw number
 def get_player_score(id,gw):
-    url="https://fantasy.premierleague.com/drf/entry/"+str(id)+"/event/"+str(gw)+"/picks"
-    r = requests.get(url)
+    url="https://fantasy.premierleague.com/drf/entry/"+str(id)+"/event/"+str(gw)+"/picks"    
+    retryCount=0
+    
+    while True:
+        try:
+            print("\rURL: "+str(url)+" Retry Count: "+str(retryCount),end="")
+            r = requests.get(url)
+        except:
+            print("\nFound exception")
+            retryCount = retryCount + 1
+            continue
+        print("")
+        break
+        
     result = json.loads(r.text)
     points=result['entry_history']['points']
     deductions=result['entry_history']['event_transfers_cost']
