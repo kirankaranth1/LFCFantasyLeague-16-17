@@ -138,9 +138,9 @@ Team: Watford FC
 Home Advantage: NO
 Captain: siddharth kaushal
 Vice Captain: Harshvardhan Yadav
-Individual Scores           : [{'Jayadev Challapally': 33}, {'Muhammad Ali': 32}, {'Janmeyjay Shukla': 26}, {'Harshvardhan Yadav': 53}, {'siddharth kaushal': 20}, {'huzefa ijardar': 50}]
-Team Scores afer multipliers: [{'Jayadev Challapally': 33}, {'Muhammad Ali': 32}, {'Janmeyjay Shukla': 26}, {'Harshvardhan Yadav': 79.5}, {'siddharth kaushal': 40}, {'huzefa ijardar': 50}]
-Cumulative team Score: 260
+Individual Scores           : [{'Jayadev Challapally': 33}, {'Muhammad Ali': 32}, {'Anuj Nair': 53}, {'Harshvardhan Yadav': 53}, {'siddharth kaushal': 20}, {'huzefa ijardar': 50}]
+Team Scores afer multipliers: [{'Jayadev Challapally': 33}, {'Muhammad Ali': 32}, {'Anuj Nair': 53}, {'Harshvardhan Yadav': 79.5}, {'siddharth kaushal': 40}, {'huzefa ijardar': 50}]
+Cumulative team Score: 288
 
 Team: West Bromwich Albion FC
 Home Advantage: YES
