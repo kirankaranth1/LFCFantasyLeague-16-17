@@ -125,14 +125,15 @@ def calcResult(n):
     return int(score)
 
 def calcbonus(m):
-    if m<=89:
+    score = calcResult(m)
+    if(score <9):
         return 0
-    elif m>= 90 and m<129:
+    elif(score <12 and score >=9):
         return 1
-    elif m>= 130 and m<149: 
+    elif(score <16 and score >=12):
         return 2
     else:
-        return 3 
+        return 3
 
 try:
     print("-----------------------------------------------------")
