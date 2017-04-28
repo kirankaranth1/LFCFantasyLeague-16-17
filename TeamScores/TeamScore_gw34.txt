@@ -1,0 +1,160 @@
+Team: AFC Bournemouth
+Home Advantage: YES
+Captain: Sai SAMARTH
+Vice Captain: Fahad Shah
+Individual Scores           : [{'Sai SAMARTH': 57}, {'Yogesh Nagarajan': 34}, {'Ashish Kamath': 80}, {'Yogaraj Kumar': 42}, {'Adarsh Kamath': 35}, {'Fahad Shah': 52}]
+Team Scores afer multipliers: [{'Sai SAMARTH': 114}, {'Yogesh Nagarajan': 34}, {'Ashish Kamath': 80}, {'Yogaraj Kumar': 42}, {'Adarsh Kamath': 35}, {'Fahad Shah': 52}]
+Cumulative team Score: 373
+
+Team: Arsenal FC
+Home Advantage: YES
+Captain: yashasvi lv
+Vice Captain: Naveen Joseph
+Individual Scores           : [{'Ranjith Joy': 51}, {'Bhavik Singh Minhas': 42}, {'Naveen Joseph': 56}, {'Arvind Kumar': 34}, {'yashasvi lv': 85}, {'Rohan Fernandes': 45}]
+Team Scores afer multipliers: [{'Ranjith Joy': 51}, {'Bhavik Singh Minhas': 42}, {'Naveen Joseph': 84.0}, {'Arvind Kumar': 34}, {'yashasvi lv': 170}, {'Rohan Fernandes': 45}]
+Cumulative team Score: 443
+
+Team: Burnley FC
+Home Advantage: YES
+Captain: Nihar Joshi
+Vice Captain: Ragarsha Velmula
+Individual Scores           : [{'Nihar Joshi': 80}, {'harsh hadkia': 63}, {'keval shah': 64}, {'Ragarsha Velmula': 53}, {'Milan Odedara': 68}, {'Aamir Bakshi': 49}]
+Team Scores afer multipliers: [{'Nihar Joshi': 160}, {'harsh hadkia': 63}, {'keval shah': 64}, {'Ragarsha Velmula': 79.5}, {'Milan Odedara': 68}, {'Aamir Bakshi': 49}]
+Cumulative team Score: 500
+
+Team: Chelsea FC
+Home Advantage: YES
+Captain: Rohit Agarwal
+Vice Captain: Subhajit Bhattacharya
+Individual Scores           : [{'Abhinav Gupta': 55}, {'Venkat Namdev': 55}, {'Hrishikesh Chavan': 47}, {'Subhajit Bhattacharya': 58}, {'Rohit Agarwal': 41}, {'ritesh sonthalia': 51}]
+Team Scores afer multipliers: [{'Abhinav Gupta': 55}, {'Venkat Namdev': 55}, {'Hrishikesh Chavan': 47}, {'Subhajit Bhattacharya': 58}, {'Rohit Agarwal': 41}, {'ritesh sonthalia': 51}]
+Cumulative team Score: 319
+
+Team: Crystal Palace FC
+Home Advantage: NO
+Captain: Saurav Chakravorty
+Vice Captain: praveen sindhu
+Individual Scores           : [{'SUBHAGATA CHAKRABORTY': 62}, {'praveen sindhu': 50}, {'Nikhil Grover': 52}, {'Faheem Ahmed': 42}, {'Ayan Banerjee': 44}, {'Saurav Chakravorty': 77}]
+Team Scores afer multipliers: [{'SUBHAGATA CHAKRABORTY': 62}, {'praveen sindhu': 75.0}, {'Nikhil Grover': 52}, {'Faheem Ahmed': 42}, {'Ayan Banerjee': 44}, {'Saurav Chakravorty': 154}]
+Cumulative team Score: 429
+
+Team: Everton FC
+Home Advantage: NO
+Captain: Roomi Tarik
+Vice Captain: Aayush Deep
+Individual Scores           : [{'Aayush Deep': 50}, {'Roomi Tarik': 44}, {'yash thawani': 44}, {'Puru Varma': 55}, {'Srinath Rajamohan': 39}, {'Rajdeep Roy': 62}]
+Team Scores afer multipliers: [{'Aayush Deep': 75.0}, {'Roomi Tarik': 88}, {'yash thawani': 44}, {'Puru Varma': 55}, {'Srinath Rajamohan': 39}, {'Rajdeep Roy': 62}]
+Cumulative team Score: 363
+
+Team: Hull City FC
+Home Advantage: YES
+Captain: John Ozorio
+Vice Captain: Hitesh Kumar
+Individual Scores           : [{'John Ozorio': 82}, {'Hitesh Kumar': 69}, {'Abhijeet Prabhu': 64}, {'Balaji Mohan': 49}, {'Chirag Malkan': 65}, {'Sunil Kini': 60}]
+Team Scores afer multipliers: [{'John Ozorio': 82}, {'Hitesh Kumar': 103.5}, {'Abhijeet Prabhu': 64}, {'Balaji Mohan': 49}, {'Chirag Malkan': 65}, {'Sunil Kini': 60}]
+Cumulative team Score: 440
+
+Team: Leicester City FC
+Home Advantage: YES
+Captain: Sahil Sankhe
+Vice Captain: abhishek bare
+Individual Scores           : [{'Sahil Sankhe': 93}, {'Vishal Vats': 34}, {'abhishek bare': 30}, {'Viggie Devadiga': 70}, {'Manoj Sriram Narasimhan': 70}, {'Pavan R': 50}]
+Team Scores afer multipliers: [{'Sahil Sankhe': 93}, {'Vishal Vats': 34}, {'abhishek bare': 30}, {'Viggie Devadiga': 70}, {'Manoj Sriram Narasimhan': 70}, {'Pavan R': 50}]
+Cumulative team Score: 366
+
+Team: Liverpool FC
+Home Advantage: YES
+Captain: Mohit Hinduja
+Vice Captain: Lalit Chaudhary
+Individual Scores           : [{'Deepak Talluri': 55}, {'Shikhar Singh': 81}, {'Mohit Hinduja': 67}, {'Lalit Chaudhary': 54}, {'Nitin Gaur': 95}, {'Mahesh Kumar': 55}]
+Team Scores afer multipliers: [{'Deepak Talluri': 55}, {'Shikhar Singh': 81}, {'Mohit Hinduja': 134}, {'Lalit Chaudhary': 81.0}, {'Nitin Gaur': 95}, {'Mahesh Kumar': 55}]
+Cumulative team Score: 520
+
+Team: Manchester City FC
+Home Advantage: YES
+Captain: PRATIK shah
+Vice Captain: Shibaprasad Bhattacharya
+Individual Scores           : [{'PRATIK shah': 57}, {'Shanub Sidiq': 45}, {'Dhruv Taneja': 70}, {'Shibaprasad Bhattacharya': 58}, {'Raghav Prasad': 55}, {'Tejus Patil': 46}]
+Team Scores afer multipliers: [{'PRATIK shah': 57}, {'Shanub Sidiq': 45}, {'Dhruv Taneja': 70}, {'Shibaprasad Bhattacharya': 58}, {'Raghav Prasad': 55}, {'Tejus Patil': 46}]
+Cumulative team Score: 345
+
+Team: Manchester United FC
+Home Advantage: NO
+Captain: Raj Shah
+Vice Captain: Sagar Shah
+Individual Scores           : [{'Tarun Aritakula': 55}, {'Akshay Patil': 77}, {'Sagar Shah': 58}, {'Raj Shah': 64}, {'Manish Dhiman': 51}, {'Nischal Prakash': 37}]
+Team Scores afer multipliers: [{'Tarun Aritakula': 55}, {'Akshay Patil': 77}, {'Sagar Shah': 87.0}, {'Raj Shah': 128}, {'Manish Dhiman': 51}, {'Nischal Prakash': 37}]
+Cumulative team Score: 435
+
+Team: Middlesbrough FC
+Home Advantage: NO
+Captain: RAVI PATEL
+Vice Captain: Kirtan Viramgami
+Individual Scores           : [{'Vinyas M': 53}, {'Jithin Chandran': 56}, {'Kirtan Viramgami': 71}, {'shiven berry': 61}, {'vatsal viramgami': 51}, {'RAVI PATEL': 59}]
+Team Scores afer multipliers: [{'Vinyas M': 53}, {'Jithin Chandran': 56}, {'Kirtan Viramgami': 106.5}, {'shiven berry': 61}, {'vatsal viramgami': 51}, {'RAVI PATEL': 118}]
+Cumulative team Score: 446
+
+Team: Southampton FC
+Home Advantage: NO
+Captain: Kiran Karanth
+Vice Captain: Abhed S Nair
+Individual Scores           : [{'Kiran Karanth': 102}, {'satpal daryanani': 34}, {'Abhed S Nair': 62}, {'Biju Menon': 55}, {'Rahul Singh': 65}, {'rajith m': 34}]
+Team Scores afer multipliers: [{'Kiran Karanth': 204}, {'satpal daryanani': 34}, {'Abhed S Nair': 93.0}, {'Biju Menon': 55}, {'Rahul Singh': 65}, {'rajith m': 34}]
+Cumulative team Score: 485
+
+Team: Stoke City FC
+Home Advantage: NO
+Captain: ANYA WARANG
+Vice Captain: Shihas Hassan
+Individual Scores           : [{'Dev Parikh': 50}, {'Prathamesh Karve': 94}, {'Ishan Joshi': 54}, {'Shihas Hassan': 75}, {'ANYA WARANG': 40}, {'Devan N': 87}]
+Team Scores afer multipliers: [{'Dev Parikh': 50}, {'Prathamesh Karve': 94}, {'Ishan Joshi': 54}, {'Shihas Hassan': 112.5}, {'ANYA WARANG': 80}, {'Devan N': 87}]
+Cumulative team Score: 478
+
+Team: Sunderland AFC
+Home Advantage: NO
+Captain: Nilay Saraf
+Vice Captain: Muzaiyen Bijli
+Individual Scores           : [{'Nilay Saraf': 59}, {'Abhishek Belsare': 61}, {'Het Gerrard': 31}, {'Harsh Panchal': 38}, {'Muzaiyen Bijli': 72}, {'Sandeep Deshpande': 65}]
+Team Scores afer multipliers: [{'Nilay Saraf': 118}, {'Abhishek Belsare': 61}, {'Het Gerrard': 31}, {'Harsh Panchal': 38}, {'Muzaiyen Bijli': 108.0}, {'Sandeep Deshpande': 65}]
+Cumulative team Score: 421
+
+Team: Swansea City FC
+Home Advantage: YES
+Captain: Nikhil Rahate
+Vice Captain: Aman pandey
+Individual Scores           : [{'Arvind Neelakantan': 36}, {'jagdeesh rajagopalan': 65}, {'Sunil Motihar': 63}, {'Nikhil Rahate': 75}, {'Aman pandey': 49}, {'Arog Moroniqk': 63}]
+Team Scores afer multipliers: [{'Arvind Neelakantan': 36}, {'jagdeesh rajagopalan': 65}, {'Sunil Motihar': 63}, {'Nikhil Rahate': 150}, {'Aman pandey': 73.5}, {'Arog Moroniqk': 63}]
+Cumulative team Score: 466
+
+Team: Tottenham Hotspur FC
+Home Advantage: NO
+Captain: Lakshya Duhan
+Vice Captain: Niranjan R
+Individual Scores           : [{'Lakshya Duhan': 96}, {'Anurag Ahuja': 78}, {'Prashant Kamra': 34}, {'Shawn Jose': 48}, {'Kunal Mhadgut': 58}, {'Niranjan R': 50}]
+Team Scores afer multipliers: [{'Lakshya Duhan': 192}, {'Anurag Ahuja': 78}, {'Prashant Kamra': 34}, {'Shawn Jose': 48}, {'Kunal Mhadgut': 58}, {'Niranjan R': 75.0}]
+Cumulative team Score: 485
+
+Team: Watford FC
+Home Advantage: NO
+Captain: Harshvardhan Yadav
+Vice Captain: siddharth kaushal
+Individual Scores           : [{'Jayadev Challapally': 56}, {'Muhammad Ali': 56}, {'Anuj Nair': 38}, {'Harshvardhan Yadav': 46}, {'siddharth kaushal': 64}, {'huzefa ijardar': 52}]
+Team Scores afer multipliers: [{'Jayadev Challapally': 56}, {'Muhammad Ali': 56}, {'Anuj Nair': 38}, {'Harshvardhan Yadav': 92}, {'siddharth kaushal': 96.0}, {'huzefa ijardar': 52}]
+Cumulative team Score: 390
+
+Team: West Bromwich Albion FC
+Home Advantage: NO
+Captain: Charchit Jain
+Vice Captain: Anosh Daji
+Individual Scores           : [{'Nishad Goliwadekar': 41}, {'Akshay Iyer': 66}, {'Jugal Yadav': 35}, {'Charchit Jain': 83}, {'Aaqib Mirza': 75}, {'Anosh Daji': 60}]
+Team Scores afer multipliers: [{'Nishad Goliwadekar': 41}, {'Akshay Iyer': 66}, {'Jugal Yadav': 35}, {'Charchit Jain': 166}, {'Aaqib Mirza': 75}, {'Anosh Daji': 90.0}]
+Cumulative team Score: 473
+
+Team: West Ham United FC
+Home Advantage: YES
+Captain: Kunal Ramteke
+Vice Captain: sarath kuttappan
+Individual Scores           : [{'Rohan Ghosh': 60}, {'Harsh Garg': 49}, {'Kaushik Das': 35}, {'Kunal Ramteke': 59}, {'Mayank Singh': 50}, {'sarath kuttappan': 62}]
+Team Scores afer multipliers: [{'Rohan Ghosh': 60}, {'Harsh Garg': 49}, {'Kaushik Das': 35}, {'Kunal Ramteke': 118}, {'Mayank Singh': 50}, {'sarath kuttappan': 93.0}]
+Cumulative team Score: 417
+
